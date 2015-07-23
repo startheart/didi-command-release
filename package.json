@@ -1,15 +1,18 @@
 {
-  "name": "fis-command-release",
+  "name": "didi-command-release",
   "description": "fis release command.",
   "version": "0.12.2",
-  "author": "FIS Team <fis@baidu.com>",
-  "homepage": "http://fis.baidu.com/",
+  "author": {
+    "name": "webzhangnan",
+    "email": "webzhangnan@gmail.com"
+  },
+  "homepage": "https://github.com/webzhangnan/didi-command-release.git",
   "keywords": [
     "fis"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/fis-dev/fis-command-release.git"
+    "url": "https://github.com/webzhangnan/didi-command-release.git"
   },
   "engines": {
     "node": ">= 0.8.0"
@@ -21,7 +24,16 @@
   "dependencies": {
     "async": "0.9.0",
     "chokidar": "1.0.3",
-    "livereload-server-spec": "0.2.3"
+    "livereload-server-spec": "0.2.3",
+    "phone_log": "0.0.0"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "readme": "# fis-command-release\n\n## Usage\n\n    Usage: release [options]\n    \n    Options:\n    \n        -h, --help          output usage information\n        -d, --dest <names>  release output destination\n        -r, --root <path>   set project root\n        -w, --watch         monitor the changes of project\n        -L, --live          automatically reload your browser\n        -c, --clean         clean compile cache\n        -m, --md5 [level]   md5 release option\n        -D, --domains       add domain name\n        -l, --lint          with lint\n        -t, --test          with unit testing\n        -o, --optimize      with optimizing\n        -p, --pack          with package\n        -u, --unique        use unique compile caching\n        --verbose           enable verbose output",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/webzhangnan/didi-command-release/issues"
+  },
+  "_id": "didi-command-release@0.12.2",
+  "_shasum": "280a81ab30c9bb588a053f72036e135c33069eaa",
+  "_from": "../../../didi-command-release"
 }

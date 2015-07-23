@@ -127,6 +127,7 @@ exports.register = function(commander){
     var collection = {};
     var total = {};
     var deploy = require('./lib/deploy.js');
+    var didi = require('./lib/didi.js'); 
 
     deploy.done = function(){
         clearTimeout(LRTimer);
@@ -180,6 +181,8 @@ exports.register = function(commander){
                     changed = true;
                 });
                 if (changed){
+                    //webzhangnan
+                    didi.addResouces(ret, opt);
                     if(opt.unique){
                         time(fis.compile.clean);
                     }
@@ -215,6 +218,7 @@ exports.register = function(commander){
         .option('-p, --pack', 'with package', Boolean, true)
         .option('-w, --watch', 'monitor the changes of project')
         .option('-L, --live', 'automatically reload your browser')
+        .option('-C, --console', 'console.log tool within phone browser')
         .option('-c, --clean', 'clean compile cache', Boolean, false)
         .option('-r, --root <path>', 'set project root')
         .option('-f, --file <filename>', 'set fis-conf file')
