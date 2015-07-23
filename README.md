@@ -11,6 +11,7 @@
         -r, --root <path>   set project root
         -w, --watch         monitor the changes of project
         -L, --live          automatically reload your browser
+        -C, --console          console.log tool within phone browser
         -c, --clean         clean compile cache
         -m, --md5 [level]   md5 release option
         -D, --domains       add domain name
