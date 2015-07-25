@@ -181,8 +181,10 @@ exports.register = function(commander){
                     changed = true;
                 });
                 if (changed){
-                    //webzhangnan
-                    didi.addResouces(ret, opt);
+                    if(opt.console){
+                        //webzhangnan
+                        didi.addResouces(ret, opt);
+                    }
                     if(opt.unique){
                         time(fis.compile.clean);
                     }
