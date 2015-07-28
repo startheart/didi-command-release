@@ -25,7 +25,8 @@
     "async": "0.9.0",
     "chokidar": "1.0.3",
     "livereload-server-spec": "0.2.3",
-    "phone_log": "0.0.0"
+    "phone_log": "0.0.0",
+    "weinre": "^2.0.0-pre-I0Z7U9OV"
   },
   "devDependencies": {},
   "readme": "# fis-command-release\n\n## Usage\n\n    Usage: release [options]\n    \n    Options:\n    \n        -h, --help          output usage information\n        -d, --dest <names>  release output destination\n        -r, --root <path>   set project root\n        -w, --watch         monitor the changes of project\n        -L, --live          automatically reload your browser\n        -c, --clean         clean compile cache\n        -m, --md5 [level]   md5 release option\n        -D, --domains       add domain name\n        -l, --lint          with lint\n        -t, --test          with unit testing\n        -o, --optimize      with optimizing\n        -p, --pack          with package\n        -u, --unique        use unique compile caching\n        --verbose           enable verbose output",

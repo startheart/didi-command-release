@@ -132,6 +132,8 @@ exports.register = function(commander){
     deploy.done = function(){
         clearTimeout(LRTimer);
         LRTimer = setTimeout(reload, fis.config.get('livereload.delay', 200));
+        //add webzhangnan
+        didi.openClientWindow();
     };
 
     function release(opt){
@@ -183,7 +185,7 @@ exports.register = function(commander){
                 if (changed){
                     if(opt.console){
                         //webzhangnan
-                        didi.addResouces(ret, opt);
+                        didi.addPhoneLogResouces(ret, opt);
                     }
                     if(opt.unique){
                         time(fis.compile.clean);
@@ -221,6 +223,7 @@ exports.register = function(commander){
         .option('-w, --watch', 'monitor the changes of project')
         .option('-L, --live', 'automatically reload your browser')
         .option('-C, --console', 'console.log tool within phone browser')
+        .option('-W, --weinre', 'use weinre debugger for web pages')
         .option('-c, --clean', 'clean compile cache', Boolean, false)
         .option('-r, --root <path>', 'set project root')
         .option('-f, --file <filename>', 'set fis-conf file')
@@ -337,7 +340,9 @@ exports.register = function(commander){
                 });
                 //delete options.live;
             }
-
+            if(options.weinre){
+                didi.startWeinre();    
+            }
             switch (typeof options.md5){
                 case 'undefined':
                     options.md5 = 0;
