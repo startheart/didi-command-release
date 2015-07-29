@@ -1,7 +1,7 @@
 {
   "name": "didi-command-release",
   "description": "fis release command.",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "author": {
     "name": "webzhangnan",
     "email": "webzhangnan@gmail.com"

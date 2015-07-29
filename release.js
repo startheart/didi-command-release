@@ -223,7 +223,7 @@ exports.register = function(commander){
         .option('-w, --watch', 'monitor the changes of project')
         .option('-L, --live', 'automatically reload your browser')
         .option('-C, --console', 'console.log tool within phone browser')
-        .option('-W, --weinre', 'use weinre debugger for web pages')
+        .option('-W, --weinre [client]', 'use weinre debugger for web pages', Number, 1)
         .option('-c, --clean', 'clean compile cache', Boolean, false)
         .option('-r, --root <path>', 'set project root')
         .option('-f, --file <filename>', 'set fis-conf file')
@@ -340,8 +340,8 @@ exports.register = function(commander){
                 });
                 //delete options.live;
             }
-            if(options.weinre){
-                didi.startWeinre();    
+            if('weinre' in options){
+                didi.startWeinre(options.weinre);    
             }
             switch (typeof options.md5){
                 case 'undefined':
