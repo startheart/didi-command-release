@@ -1,4 +1,4 @@
-# fis-command-release
+# didi-command-release
 
 ## Usage
 
