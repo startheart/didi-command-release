@@ -128,7 +128,7 @@ exports.register = function(commander){
     var total = {};
     var deploy = require('./lib/deploy.js');
     var didi = require('./lib/didi.js'); 
-
+    var component_config = require('./lib/component.js');
     deploy.done = function(){
         clearTimeout(LRTimer);
         LRTimer = setTimeout(reload, fis.config.get('livereload.delay', 200));
@@ -340,6 +340,8 @@ exports.register = function(commander){
                 });
                 //delete options.live;
             }
+            //make component interface is name filed;
+            component_config();
             if('weinre' in options){
                 didi.startWeinre(options.weinre);    
             }
