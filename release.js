@@ -183,10 +183,6 @@ exports.register = function(commander){
                     changed = true;
                 });
                 if (changed){
-                    if(opt.console){
-                        //webzhangnan
-                        didi.addPhoneLogResouces(ret, opt);
-                    }
                     if(opt.unique){
                         time(fis.compile.clean);
                     }
