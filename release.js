@@ -14,7 +14,7 @@ exports.register = function(commander){
         var timer = -1;
         var safePathReg = /[\\\/][_\-.\s\w]+$/i;
         var ignoredReg = /[\/\\](?:output\b[^\/\\]*([\/\\]|$)|\.|fis-conf\.js$)/i;
-        
+
         // init cache
         var files = fis.project.getSource();
         fis.util.map(files, function (subpath, file) {
@@ -24,7 +24,7 @@ exports.register = function(commander){
 
         // first compile
         release(opt);
-        
+
         function listener(type){
             return function (path) {
                 var p;
@@ -127,7 +127,7 @@ exports.register = function(commander){
     var collection = {};
     var total = {};
     var deploy = require('./lib/deploy.js');
-    var didi = require('./lib/didi.js'); 
+    var didi = require('./lib/didi.js');
     var component_config = require('./lib/component.js');
     deploy.done = function(){
         clearTimeout(LRTimer);
@@ -224,6 +224,7 @@ exports.register = function(commander){
         .option('-r, --root <path>', 'set project root')
         .option('-f, --file <filename>', 'set fis-conf file')
         .option('-u, --unique', 'use unique compile caching', Boolean, false)
+        .option('-O, --omega', 'insert omega code', Boolean, false)
         .option('--verbose', 'enable verbose output', Boolean, false)
         .action(function(){
 
@@ -339,7 +340,7 @@ exports.register = function(commander){
             //make component interface is name filed;
             component_config();
             if('weinre' in options){
-                didi.startWeinre(options.weinre);    
+                didi.startWeinre(options.weinre);
             }
             switch (typeof options.md5){
                 case 'undefined':
