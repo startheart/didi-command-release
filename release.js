@@ -226,6 +226,7 @@ exports.register = function(commander){
         .option('-u, --unique', 'use unique compile caching', Boolean, false)
         .option('-O, --omega', 'insert omega code', Boolean, false)
         .option('--verbose', 'enable verbose output', Boolean, false)
+        .option('-n, --didiConsole', 'more comfortable console.log tool')
         .action(function(){
 
             var options = arguments[arguments.length - 1];
