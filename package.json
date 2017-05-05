@@ -26,7 +26,6 @@
     "chokidar": "1.0.3",
     "livereload-server-spec": "0.2.3",
     "phone_log": ">0.0.1",
-    "didi-console": "1.0.4",
     "weinre": "^2.0.0-pre-I0Z7U9OV"
   },
   "devDependencies": {},
